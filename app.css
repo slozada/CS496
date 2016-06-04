@@ -1,0 +1,37 @@
+h1,h2,h3,h4,h5 {
+    color:#006eb7;
+}
+
+.ui-btn-icon-notext.ui-corner-all {
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+}
+.ui-title {
+    color:#006eb7;
+}
+.mc-text-center {
+    text-align:center;
+}
+.mc-top-margin-1-5 {
+    margin-top:1.5em;
+}
+
+.fmdiv{
+	margin:30px;
+ 	position:relative;
+}
+
+.ui-input-text{
+	width: 90%;
+	
+}
+
+.ui-btn{
+	width:60%
+}
+
+h2.mc-text-danger,
+h3.mc-text-danger  {
+    color:red;
+}
+

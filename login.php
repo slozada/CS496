@@ -7,11 +7,12 @@ initial-scale=1">
 <link rel="stylesheet"
 href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
 />
+
+<link href="app.css" rel="stylesheet" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script
 src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 </head>
 
 <body>
@@ -20,7 +21,22 @@ src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <h1>The Coupon Book</h1>
   </div>
 
+<div class="fmdiv">
+<h3>Welcome!</h3>
+<div class="fmdiv">
+<label for="txt-email">Email Address</label>
+<input type="text" name="txt-email" id="txt-email" value="">
+<label for="txt-password">Password</label>
+<input type="password" name="txt-password" id="txt-password" value="">
+
+    <input type="button" value="Sign In">
+</form>
+<p>Don't have a login? <a href="signup.php">Sign up</a> </p>
+
+<div>
+
 <?php
+/*
 //PHP cURL
 
 //Initialize session
@@ -37,7 +53,7 @@ curl_close($ch);
 //Transfor user data into a json object
 $data=json_decode($content,true);
 
-echo "<h3>My Coupons</h3>";
+echo "<h2>My Coupons</h2>";
 
 //Obtain current user saved coupons 
 foreach ($data['offers'] as $key => $values)
@@ -68,19 +84,12 @@ foreach ($data['offers'] as $key => $values)
 	
 }
 echo "</table>";
-
+*/
 ?>
 
-
-<div data-role="footer" data-position="fixed">
-  <div data-role="navbar">
-    <ul>
-      <li><a href="#" data-icon='home'>My Coupons</a></li>
-      <li><a href="#" data-icon='plus'>Add Coupon</a></li>
-    </ul>
-  </div><!-- /navbar -->
-</div><!-- /foot
-
+<div data-role="footer" data-position="fixed"> 
+	<h4></h4> 
+</div> 
 
 </body>
 </html>
