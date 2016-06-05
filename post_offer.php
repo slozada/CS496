@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+if(!$_SESSION['login_user'])
+{
+    echo "You are not logged in!";
+    header("location: login.php");
+    echo '<br/>Please <a href="login.php" class="btn btn-primary btn-lg active" role="button">Login</a>';
+    die();
+}
+
+$userid=$_SESSION['login_user'];
+
+?>
 
 <!DOCTYPE html> 
 <html>
@@ -27,7 +42,7 @@ src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <?php
 
-$userid="5676073085829120";
+//$userid="5676073085829120";
 
 $product=$_POST['product'];
 $discount=$_POST['discount'];

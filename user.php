@@ -1,3 +1,21 @@
+<?php
+
+session_start();
+
+if(!$_SESSION['login_user'])
+{
+	echo "You are not logged in!";
+  	header("location: login.php");
+  	echo '<br/>Please <a href="login.php" class="btn btn-primary btn-lg active" role="button">Login</a>';
+  	die();
+}
+
+$userid=$_SESSION['login_user'];
+
+
+?>
+
+
 <!DOCTYPE html> 
 <html>
 <head>
@@ -23,7 +41,7 @@
 
 $ch = curl_init();
 
-$userid="5676073085829120"; 
+//$userid="5676073085829120"; 
 //Set Options
 curl_setopt($ch,CURLOPT_URL,"http://finalapi-1327.appspot.com/user/".$userid );
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
@@ -73,7 +91,9 @@ echo "</table>";
     <ul>
       <li><a href="#" data-icon='home'>My Coupons</a></li>
       <li><a href="offer.php" data-icon='plus'>Add Coupon</a></li>
-    </ul>
+      <li><a href="logout.php" data-icon='user'>Sign out</a></li>
+    
+	</ul>
   </div><!-- /navbar -->
 </div><!-- /foot
 
