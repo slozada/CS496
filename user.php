@@ -2,16 +2,12 @@
 <html>
 <head>
         <title>My Page</title>
-    <meta name="viewport" content="width=device-width,
-initial-scale=1">
-<link rel="stylesheet"
-href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
-/>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script
-src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link href="app.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -27,7 +23,7 @@ src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 $ch = curl_init();
 
-$userid="5664248772427776"; 
+$userid="5676073085829120"; 
 //Set Options
 curl_setopt($ch,CURLOPT_URL,"http://finalapi-1327.appspot.com/user/".$userid );
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
@@ -58,7 +54,7 @@ foreach ($data['offers'] as $key => $values)
 
 	echo "<div data-role='collapsible' data-theme='s' data-content-theme='s' >";
   	
-	echo "<h3>$product<h3>";
+	echo "<h4>$product<h4>";
 	echo "<p>Discount code: $code</p>";	
 	echo "<p>Discount percentage: $discountPer</p>";	
 	echo "<p>Valid until: $validUntil</p>";	
@@ -76,7 +72,7 @@ echo "</table>";
   <div data-role="navbar">
     <ul>
       <li><a href="#" data-icon='home'>My Coupons</a></li>
-      <li><a href="#" data-icon='plus'>Add Coupon</a></li>
+      <li><a href="offer.php" data-icon='plus'>Add Coupon</a></li>
     </ul>
   </div><!-- /navbar -->
 </div><!-- /foot
