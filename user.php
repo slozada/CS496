@@ -12,14 +12,12 @@ if(!$_SESSION['login_user'])
 
 $userid=$_SESSION['login_user'];
 
-
 ?>
-
 
 <!DOCTYPE html> 
 <html>
 <head>
-        <title>My Page</title>
+    <title>Coupon Book</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -64,24 +62,27 @@ foreach ($data['offers'] as $key => $values)
     curl_close($ch);
 	
 	$coupon=json_decode($offerInfo,true);
-	$code=$coupon['code'];
-	$product=$coupon['product'];
-	$discountPer=$coupon['discountPer'];
-	$validUntil=$coupon['validUntil'];	
-	$validWebsite=$coupon['validWebsite'];	
-
-	echo "<div data-role='collapsible' data-theme='s' data-content-theme='s' >";
+	if ($coupon)
+	{	
+		$code=$coupon['code'];
+		$product=$coupon['product'];
+		$discountPer=$coupon['discountPer'];
+		$validUntil=$coupon['validUntil'];	
+		$validWebsite=$coupon['validWebsite'];	
+		$key=$coupon['key'];
+		echo "<div data-role='collapsible' data-theme='s' data-content-theme='s' >";
   	
-	echo "<h4>$product<h4>";
-	echo "<p>Discount code: $code</p>";	
-	echo "<p>Discount percentage: $discountPer</p>";	
-	echo "<p>Valid until: $validUntil</p>";	
-	echo "<p>Website: $validWebsite</p>";	
-	
-	echo "</div>";
-	
+		echo "<h4>$product<h4>";
+		echo "<p>Discount code: $code</p>";	
+		echo "<p>Discount percentage: $discountPer</p>";	
+		echo "<p>Valid until: $validUntil</p>";	
+		echo "<p>Website: $validWebsite</p>";	
+		echo "<a href=\"update.php?id=".$key."\" date-theme='b' data-role='button' data-inline='true' data-icon='edit' data-mini='true'>Edit</a>";
+		echo "<a href=\"delete.php?id=".$key."\" date-theme='b' data-role='button' data-inline='true' data-icon='delete' data-mini='true'>Delete</a>";
+
+		echo "</div>";
+	}	
 }
-echo "</table>";
 
 ?>
 

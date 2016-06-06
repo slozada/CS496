@@ -45,7 +45,8 @@ src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <ul>
       <li><a href="user.php" data-icon='home'>My Coupons</a></li>
       <li><a href="#" data-icon='plus'>Add Coupon</a></li>
-    </ul>
+   	  <li><a href="logout.php" data-icon='user'>Sign out</a></li>
+	 </ul>
   </div><!-- /navbar -->
 </div><!-- /foot
 </body>
